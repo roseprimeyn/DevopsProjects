@@ -6,23 +6,23 @@ Autumns LLC, a boutique bakery specializing in handcrafted cakes, was experienci
 
 ## Prerequisites
 
-## 1. Register an AWS account: Follow AWS instructions.
+### 1. Register an AWS account: Follow AWS instructions.
    
 Launch an EC2 Instance:
    
- •  Select your preferred region.
+   •  Select your preferred region.
  
- •  Launch a t2.micro instance from the Ubuntu Server 20.04 LTS (HVM) family.
+   •  Launch a t2.micro instance from the Ubuntu Server 20.04 LTS (HVM) family.
  
- •  Important: Save your private key (.pem file) securely and don't share it!
+   •  Important: Save your private key (.pem file) securely and don't share it!
 
-## 2. Connect to the EC2 Terminal:
+### 2. Connect to the EC2 Terminal:
    
-  •	Mac/Linux: Use the built-in terminal and ssh command.
+   •	Mac/Linux: Use the built-in terminal and ssh command.
+   
+   • Windows: Download and install Putty (http://www.9bis.net/kitty/#!pages/download.md).
 
-  •	Windows: Download and install Putty (http://www.9bis.net/kitty/#!pages/download.md).
-
-## Connecting Instructions (Specific to OS):
+### Connecting Instructions (Specific to OS):
 
   •	Mac/Linux: No conversion needed, use the downloaded private key. 
 
@@ -36,7 +36,7 @@ Launch an EC2 Instance:
 
    o	Connect: ssh -i <private-key-name>.pem ubuntu@<Public-IP-address>
 
-## Congratulations!  We have created  Linux Server in the Cloud and our set up looks like this now: (You are the client)
+### Congratulations!  We have created  Linux Server in the Cloud and our set up looks like this now: (You are the client)
 
 ![pic 1](https://github.com/roseprimeyn/DevopsProjects/assets/121585728/9a4db5a0-df71-4973-9b9b-43664218b17c)
 
@@ -52,7 +52,7 @@ Launch an EC2 Instance:
 
   5.	Install Apache using Ubuntu’s package manager ‘apt’:
 
-## Test Apache Locally and Publicly:
+### Test Apache Locally and Publicly:
 
   •	Local: 
 
@@ -64,7 +64,7 @@ Launch an EC2 Instance:
 
    o	Alternatively, get your Public IP with: curl -s http://169.254.169.254/latest/meta-data/public-ipv4
 
-## You should see the default Apache web page if successful.
+### You should see the default Apache web page if successful.
 
 ![Pic 2](https://github.com/roseprimeyn/DevopsProjects/assets/121585728/79e4713c-163d-4d58-aa47-c792a05cfe4c)
 
@@ -88,7 +88,7 @@ Launch an EC2 Instance:
 
   5.	Exit the script and test login with the new password: sudo mysql -p
 
-## Your MySQL server is now installed and secured.
+### Your MySQL server is now installed and secured.
 
 # STEP 3: Installing PHP
 
@@ -96,9 +96,9 @@ Launch an EC2 Instance:
 
   2.	Verify PHP version: php -v
 
-## At this point, your LAMP stack is fully functional!
+### At this point, your LAMP stack is fully functional!
 
-## Note: To host a website, you'll need to configure a virtual host, covered in the next step.
+### Note: To host a website, you'll need to configure a virtual host, covered in the next step.
 
 # STEP 4: Creating a Virtual Host
 
@@ -114,14 +114,21 @@ This guide uses projectlamp as the domain name (replace with your desired name).
 
   4.	Paste the following configuration:
 
-<VirtualHost *:80>
-    ServerName projectlamp
-    ServerAlias www.projectlamp 
-    ServerAdmin webmaster@localhost
-    DocumentRoot /var/www/projectlamp
-    ErrorLog ${APACHE_LOG_DIR}/error.log
-    CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>
+    <VirtualHost *:80>
+   
+       ServerName projectlamp
+       
+       ServerAlias www.projectlamp 
+       
+       ServerAdmin webmaster@localhost
+       
+       DocumentRoot /var/www/projectlamp
+       
+       ErrorLog ${APACHE_LOG_DIR}/error.log
+       
+       CustomLog ${APACHE_LOG_DIR}/access.log combined
+       
+       </VirtualHost>
         
   5.	Save and close the file.
 
@@ -133,7 +140,7 @@ This guide uses projectlamp as the domain name (replace with your desired name).
 
   9.	Reload Apache: sudo systemctl reload apache2
 
-## Test your website:
+### Test your website:
 
   1.	Create an index.html file in the project directory:
 
@@ -165,7 +172,7 @@ By default, Apache prioritizes .html files over .php. To serve PHP files:
 
   4.	Reload Apache: sudo systemctl reload apache2
 
-## Test PHP:
+### Test PHP:
 
   1.	Create a test.php file in your project directory:
 
@@ -181,11 +188,11 @@ phpinfo();
 
 ![pic 4](https://github.com/roseprimeyn/DevopsProjects/assets/121585728/0db65261-192c-483c-8489-fa0330d7fc6e)
 
-## Congratulations! You've successfully implemented a LAMP stack on your AWS server.
+### Congratulations! You've successfully implemented a LAMP stack on your AWS server.
 
 # Lesson Learned & Challenge: LAMP Stack on AWS
 
-## Lesson: A LAMP stack on AWS provides a robust, scalable, and cost-effective foundation for web applications. By following these steps, you gained valuable experience in:
+### Lesson: A LAMP stack on AWS provides a robust, scalable, and cost-effective foundation for web applications. By following these steps, you gained valuable experience in:
 
   •	Cloud Infrastructure: Launching and managing a virtual server instance (EC2) in the AWS cloud.
 
@@ -199,7 +206,7 @@ phpinfo();
 
 This knowledge empowers you to build and deploy functional web applications on the AWS platform.
 
-## Challenge: Optimizing Performance and Security for Growth
+### Challenge: Optimizing Performance and Security for Growth
 
 While a basic LAMP stack is a strong starting point, it requires ongoing optimization as your website scales:
 
