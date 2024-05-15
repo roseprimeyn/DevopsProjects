@@ -10,11 +10,9 @@ Autumns LLC, a boutique bakery specializing in handcrafted cakes, was experienci
    
 Launch an EC2 Instance:
    
-  •	Select your preferred region.
-
-  •	Launch a t2.micro instance from the Ubuntu Server 20.04 LTS (HVM) family.
-
-  •	Important: Save your private key (.pem file) securely and don't share it!
+ •  Select your preferred region.
+ •  Launch a t2.micro instance from the Ubuntu Server 20.04 LTS (HVM) family.
+ •  Important: Save your private key (.pem file) securely and don't share it!
 
 2. Connect to the EC2 Terminal:
    
@@ -190,9 +188,9 @@ phpinfo();
 
 Congratulations! You've successfully implemented a LAMP stack on your AWS server.
 
-#Lesson Learned & Challenge: LAMP Stack on AWS
+# Lesson Learned & Challenge: LAMP Stack on AWS
 
-Lesson: A LAMP stack on AWS provides a robust, scalable, and cost-effective foundation for web applications. By following these steps, you gained valuable experience in:
+## Lesson: A LAMP stack on AWS provides a robust, scalable, and cost-effective foundation for web applications. By following these steps, you gained valuable experience in:
 
   •	Cloud Infrastructure: Launching and managing a virtual server instance (EC2) in the AWS cloud.
 
@@ -206,7 +204,7 @@ Lesson: A LAMP stack on AWS provides a robust, scalable, and cost-effective foun
 
 This knowledge empowers you to build and deploy functional web applications on the AWS platform.
 
-Challenge: Optimizing Performance and Security for Growth
+## Challenge: Optimizing Performance and Security for Growth
 
 While a basic LAMP stack is a strong starting point, it requires ongoing optimization as your website scales:
 
