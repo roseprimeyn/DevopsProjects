@@ -1,4 +1,4 @@
-# Linux
+# Linu
 
 ## Skills
 
