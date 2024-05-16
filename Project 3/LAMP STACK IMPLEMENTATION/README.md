@@ -1,4 +1,4 @@
-# Web Stack Implementation (LAMP STACK) in AWS
+# Web Stack Implementation (LAMP STACK) in AW
 
 ## Use Case
 
