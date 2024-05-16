@@ -1,4 +1,4 @@
-# Deploy-Scalable-VPC-Architecture-on-AWS-Cloud
+# Deploy-Scalable-VPC-Architecture-on-AWS-Clou
 
 ## TABLE OF CONTENTS
 1. Use Case
