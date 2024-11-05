@@ -5,18 +5,24 @@ Solution: Migrate to a more robust and scalable CDN platform on a cloud provider
 ![210118416-5abdf8d5-5fb8-4caf-b315-3d98d45a9e3d](https://github.com/user-attachments/assets/dd239251-d983-4682-b8f6-8ac408319c82)
 
 1. Setting Up the Development Environment:
+   
 Prerequisites:
+
 •	An AWS account with appropriate permissions.
+
 •	Node.js and npm installed on your local development machine.
+
 Ubuntu Server Setup:
+
 1.	Create an EC2 Instance:
+   
 o	Login to the AWS Management Console and navigate to the EC2 service.
 o	Choose "Launch Instance."
 o	Select an appropriate Amazon Machine Image (AMI). For this example, we'll use "Ubuntu Server 20.04 LTS."
 o	Choose an instance type. For development, a free tier t2.micro instance is sufficient.
 o	Configure security groups to allow inbound SSH access on port 22.
 o	Launch the instance and download the key pair (.pem file).
-2.	Connect to the Instance:
+3.	Connect to the Instance:
 o	Use an SSH client like PuTTY to connect to your instance using the public DNS address and your downloaded key pair.
 2. Backend Development:
 Project Setup:
