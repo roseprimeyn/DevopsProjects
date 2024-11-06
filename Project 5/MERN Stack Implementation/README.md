@@ -105,7 +105,7 @@ Open the index.js file with the command below
     vim index.js
     
 Type the code below into it and save. Do not get overwhelmed by the code you see. For now, simply paste the code into the file.
-
+```
 const express = require('express');
 require('dotenv').config();
 
@@ -126,7 +126,7 @@ res.send('Welcome to Express');
 app.listen(port, () => {
 console.log(`Server running on port ${port}`)
 });
-    
+```    
 Notice that we have specified to use port 5000 in the code. This will be required later when we go on the browser.
 
 Use :w to save in vim and use :qa to exit vim
@@ -156,7 +156,6 @@ Quick reminder how to get your server’s Public IP and public DNS name:
  ![Picture3](https://github.com/user-attachments/assets/de0cb73c-1719-409e-8984-6bd45d042365)
 
 
-
 Routes There are three actions that our To-Do application needs to be able to do:
 
 1.	Create a new task
@@ -182,7 +181,7 @@ Now, create a file api.js with the command below
     touch api.js
 
 Open the file with the command below
-
+```
     vim api.js
     
 const express = require ('express');
@@ -201,8 +200,7 @@ router.delete('/todos/:id', (req, res, next) => {
 })
 
 module.exports = router;
-
-
+```
 We need a database where we will store our data. For this we will make use of mLab. mLab provides MongoDB database as a service solution [(DBaaS)]https://en.wikipedia.org/wiki/Cloud_database(), 
 
 Allow access to the MongoDB database from anywhere (Not secure, but it is ideal for testing)
@@ -227,7 +225,6 @@ Ensure to update , , and according to your setup
 Here is how to get your connection string
  ![Picture5](https://github.com/user-attachments/assets/45c8b9c4-5626-4c3d-8fb8-bde543f98576)
 
- 
 Now we need to update the index.js to reflect the use of .env so that Node.js can connect to the database.
 
 Simply delete existing content in the file, and update it with the entire code below.
@@ -247,7 +244,7 @@ To do that using vim, follow below steps
 The entire content will be deleted, then,
 
 6.	Press i to enter the insert mode in vim
-   
+```   
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
@@ -285,7 +282,7 @@ next();
 app.listen(port, () => {
 console.log(`Server running on port ${port}`)
 });
-
+```
 Using environment variables to store information is considered more secure and best practice to separate configuration and secret data from the application, instead of writing connection strings directly inside the index.js application file.
 
 Start your server using the command:
@@ -338,14 +335,14 @@ Install nodemon. It is used to run and monitor the server. If there is any chang
     npm install nodemon --save-dev
 
 In Todo folder open the package.json file. Change the highlighted part of the below screenshot and replace with the code below.
-
+```
 "scripts": {
 "start": "node index.js",
 "start-watch": "nodemon index.js",
 "dev": "concurrently \"npm run start-watch\" \"cd client && npm start\""
 },
 5011
-
+```
 Configure Proxy in package.json
 
 Change directory to ‘client’
@@ -389,7 +386,7 @@ Inside ‘components’ directory create three files Input.js, ListTodo.js and T
 Open Input.js file
 
     vi Input.js
-
+```
 import React, { Component } from 'react';
 import axios from 'axios';
 
@@ -435,7 +432,7 @@ return (
 }
 
 export default Input
-
+```
 To make use of Axios, which is a Promise based HTTP client for the browser and node.js, you need to cd into your client from your terminal and run yarn add axios or npm install axios.
 
 Move to the src folder
@@ -459,7 +456,7 @@ After that open your ListTodo.js
     vi ListTodo.js
 
 in the ListTodo.js copy and use the following code
-
+```
 import React from 'react';
 
 const ListTodo = ({ todos, deleteTodo }) => {
@@ -543,7 +540,7 @@ let { todos } = this.state;
 }
 
 export default Todo;
-
+```
 We need to make little adjustment to our react code. Delete the logo and adjust our App.js to look like this.
 
 Move to the src folder
@@ -555,7 +552,7 @@ Make sure that you are in the src folder and run
     vi App.js
 
 Copy and paste the code below into it
-
+```
 import React from 'react';
 
 import Todo from './components/Todo';
@@ -568,7 +565,7 @@ return (
 </div>
 );
 }
-
+```
 export default App;
 
 After pasting, exit the editor.
@@ -578,7 +575,7 @@ In the src directory open the App.css
     vi App.css
 
 Then paste the following code into App.css:
-
+```
 .App {
 text-align: center;
 font-size: calc(10px + 2vmin);
@@ -667,12 +664,12 @@ margin-top: 0;
 }
 }
 Exit
-
+```
 In the src directory open the index.css
 
 vim index.css
 Copy and paste the code below:
-
+```
 body {
 margin: 0;
 padding: 0;
@@ -690,7 +687,7 @@ code {
 font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 monospace;
 }
-
+```
 Go to the Todo directory
 
     cd ../..
