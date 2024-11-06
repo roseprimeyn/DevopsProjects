@@ -1,18 +1,22 @@
-USE CASE
-Challenge: DTC is a rapidly growing online clothing store experiencing issues with their current Content Delivery Network (CDN). As their product catalog and customer base expand, the existing CDN struggles to deliver high-resolution images and videos efficiently. This results in slow loading times, impacting customer experience and potentially leading to lost sales.
-Solution: Migrate to a more robust and scalable CDN platform on a cloud provider like AWS .
+**USE CASE Challenge**
+
+DTC is a rapidly growing online clothing store experiencing issues with their current Content Delivery Network (CDN). As their product catalog and customer base expand, the existing CDN struggles to deliver high-resolution images and videos efficiently. This results in slow loading times, impacting customer experience and potentially leading to lost sales.
+
+**Solution:**
+
+Migrate to a more robust and scalable CDN platform on a cloud provider like AWS .
 
 ![210118416-5abdf8d5-5fb8-4caf-b315-3d98d45a9e3d](https://github.com/user-attachments/assets/dd239251-d983-4682-b8f6-8ac408319c82)
 
-1. Setting Up the Development Environment:
+**1. Setting Up the Development Environment:**
    
-Prerequisites:
+**Prerequisites:**
 
 •	An AWS account with appropriate permissions.
 
 •	Node.js and npm installed on your local development machine.
 
-Ubuntu Server Setup:
+**Ubuntu Server Setup:**
 
 1.	Create an EC2 Instance:
    
@@ -32,10 +36,8 @@ o	Launch the instance and download the key pair (.pem file).
    
 o	Use an SSH client like PuTTY to connect to your instance using the public DNS address and your downloaded key pair.
 
-2. Backend Development:
+**2. Backend Development:**
    
-Project Setup:
-
 Update ubuntu
 
     sudo apt update
@@ -79,6 +81,7 @@ Now change your current directory to the newly created one:
 Next, you will use the command npm init to initialise your project, so that a new file named package.json will be created. This file will normally contain information about your application and the dependencies that it needs to run. Follow the prompts after running the command. You can press Enter several times to accept default values, then accept to write out the package.json file by typing yes.
 
     npm init
+    
 Run the command ls to confirm that you have package.json file created.
 
 Next, we will Install ExpressJs and create the Routes directory.
